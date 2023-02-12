@@ -1,0 +1,3 @@
+# List all ports
+
+sudo netstat -tulpn | grep LISTEN

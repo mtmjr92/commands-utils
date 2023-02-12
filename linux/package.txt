@@ -1,0 +1,3 @@
+# list packs
+
+apt-cache policy postgresql
