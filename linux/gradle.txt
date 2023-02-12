@@ -1,0 +1,6 @@
+# publish maven local
+
+./gradlew clean format build publishToMavenLocal
+./gradlew makeMigrations
+
+pkill -f '.*GradleDaemon.*'

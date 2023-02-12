@@ -1,0 +1,22 @@
+# create network
+
+docker network create -d bridge mail
+
+# create container
+
+docker run -d -p 8025:8025 -p 1025:1025 --name mailhog --net mail mailhog/mailhog
+
+# add keycloak to network
+
+mail
+
+# config in keycloak
+
+host: mailhog
+port: 1025
+from: keycloak@mailhog.com
+
+# config
+
+mail: localhost
+port: 1025

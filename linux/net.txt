@@ -1,3 +1,7 @@
 # List all ports
 
 sudo netstat -tulpn | grep LISTEN
+
+# kill open port
+
+sudo kill -9 $(sudo lsof -t -i:8000)
