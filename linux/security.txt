@@ -1,0 +1,9 @@
+SSH LINUX
+
+cd ~/.ssh
+
+ssh-keygen -t rsa -b 4096 -C "example@example.com"
+
+eval $(ssh-agent -s)
+
+ssh-add ~/.ssh/name_key
