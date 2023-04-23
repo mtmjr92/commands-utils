@@ -1,0 +1,19 @@
+# Steam
+
+sudo apt-get remove steam steam-launcher
+sudo apt-get purge steam steam-launcher
+rm -rf ~/.local/share/Steam && rm -rf ~/.steam
+rm ~/.steampath
+rm ~/.steampid
+
+# Wine
+
+sudo apt autoremove wine-stable
+sudo apt-get --purge remove wine*
+
+# Utils
+
+sudo apt-get update
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt-get autoremove --purge
