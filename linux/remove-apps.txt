@@ -2,6 +2,7 @@
 
 sudo apt-get remove steam steam-launcher
 sudo apt-get purge steam steam-launcher
+sudo apt purge steam-libs*
 rm -rf ~/.local/share/Steam && rm -rf ~/.steam
 rm ~/.steampath
 rm ~/.steampid
