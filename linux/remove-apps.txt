@@ -10,6 +10,7 @@ rm ~/.steampid
 
 sudo apt autoremove wine-stable
 sudo apt-get --purge remove wine*
+rm -rf ~/.wine
 
 # Utils
 
