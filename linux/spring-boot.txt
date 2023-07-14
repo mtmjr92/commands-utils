@@ -1,0 +1,11 @@
+# Reduce Memory
+
+-XX:+UseSerialGC This will perform garbage collection inline with the thread allocating the heap memory instead of a dedicated GC thread(s)
+
+-Xss512k This will limit each threads stack memory to 512KB instead of the default 1MB
+
+-XX:MaxRAM=72m This will restrict the JVM's calculations for the heap and non heap managed memory to be within the limits of this value.
+
+server.tomcat.max-threads = 1
+
+-XX:MaxRAM=150m
