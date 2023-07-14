@@ -1,0 +1,4 @@
+# Run WAR cmd 
+jar -xvf MyWar.war
+cd WEB-INF
+java -classpath "lib/*:classes/." my.packages.destination.FileToRun
