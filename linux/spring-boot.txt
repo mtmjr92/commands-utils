@@ -7,5 +7,3 @@
 -XX:MaxRAM=72m This will restrict the JVM's calculations for the heap and non heap managed memory to be within the limits of this value.
 
 server.tomcat.max-threads = 1
-
--XX:MaxRAM=150m
