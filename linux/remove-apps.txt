@@ -13,6 +13,10 @@ sudo apt autoremove wine-stable
 sudo apt-get --purge remove wine*
 rm -rf ~/.wine
 
+# Play On Linux
+
+sudo apt purge playonlinux* && sudo apt autoremove && rm -r ~/.wine ~/.playonlinux ~/.PlayOnLinux ~/"PlayOnLinux's virtual drives"
+
 # Utils
 
 sudo apt-get update
