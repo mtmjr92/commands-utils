@@ -23,3 +23,10 @@ sudo apt-get update
 sudo apt-get autoclean
 sudo apt-get clean
 sudo apt-get autoremove --purge
+
+# Brave
+
+sudo apt remove brave-browser
+sudo apt purge brave-browser
+rm -rf ~/.config/BraveSoftware
+rm -rf ~/.cache/BraveSoftware
