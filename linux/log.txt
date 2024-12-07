@@ -1,0 +1,88 @@
+In Linux, logs are stored in the /var/log directory, and you can view them using various commands and tools. Here’s how to access and display Linux logs:
+
+Common Log Files
+
+1 System Log: /var/log/syslog or /var/log/messages
+
+Contains system-wide logs and informational messages.
+
+2 Authentication Log: /var/log/auth.log
+
+Tracks login attempts, SSH logins, etc.
+
+3 Kernel Log: /var/log/kern.log
+
+Kernel-related logs.
+
+4 Application Logs: Logs specific to applications (e.g., Apache, MySQL).
+
+Apache logs: /var/log/apache2/
+MySQL logs: /var/log/mysql/
+
+Commands to View Logs
+
+1 View Log File (Static View):
+
+-cat /var/log/syslog
+
+2 Paginated View:
+
+- less /var/log/syslog
+
+Use Space to scroll, q to quit.
+
+3 Follow Logs in Real-Time:
+
+- tail -f /var/log/syslog
+
+This updates dynamically as new logs are added.
+
+4 Search in Logs:
+
+- grep "keyword" /var/log/syslog
+
+Replace keyword with the string you want to search.
+
+5 Filter Logs with journalctl:
+
+View systemd logs:
+
+- journalctl
+
+Real-time logs:
+
+- journalctl -f
+
+Filter by time:
+
+-journalctl --since "2024-12-01 10:00:00"
+
+6 View Kernel Logs:
+
+- dmesg
+
+Example Use Cases
+
+Check login attempts:
+
+- cat /var/log/auth.log | grep "authentication failure"
+
+Debug network issues:
+
+- cat /var/log/syslog | grep "network"
+
+Check disk issues:
+
+- dmesg | grep "sda"
+
+Tips
+
+Use sudo if the log file is restricted:
+
+- sudo tail -f /var/log/auth.log
+
+Rotate logs are often compressed (.gz):
+
+- zcat /var/log/syslog.1.gz
+
+Manage log size with logrotate.
