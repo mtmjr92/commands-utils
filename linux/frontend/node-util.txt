@@ -14,6 +14,11 @@ nvm -v
 nvm install 18
 nvm use 18
 
+#NVM LTS
+
+nvm install --lts
+nvm use --lts
+
 #NPM
 
 npm install
