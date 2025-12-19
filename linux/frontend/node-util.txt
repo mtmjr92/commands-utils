@@ -1,0 +1,25 @@
+#INSTALL
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+source ~/.bashrc    # or ~/.zshrc if you use zsh
+
+
+#NVM
+
+nvm ls-remote --lts
+
+nvm -v
+
+nvm install 18
+nvm use 18
+
+#NPM
+
+npm install
+
+npm run dev
+
+#VERSION PROJECT NODE VERSION
+
+cat package.json | grep engines -A 2 
