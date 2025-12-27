@@ -85,4 +85,10 @@ Rotate logs are often compressed (.gz):
 
 - zcat /var/log/syslog.1.gz
 
+Error
+
+sudo journalctl -p err -b
+
+
+
 Manage log size with logrotate.
