@@ -1,0 +1,42 @@
+🚨 Causas mais comuns
+
+Sistema de arquivos corrompido
+
+HD/SSD com setores defeituosos
+
+Pendrive / disco externo com erro
+
+FS montado em modo somente leitura
+
+Queda de energia / desligamento incorreto
+
+
+-- sudo umount /dev/sdc1
+
+e2fsck 1.47.0 (5-Feb-2023)
+seagate_bkp: recovering journal
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+/lost+found not found.  Create<y>? yes
+
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Block bitmap differences:  -(134897664--134899061) -(245895200--245896052) -(248516640--248517655) -(249565216--249566107)
+Fix<y>? yes
+Free blocks count wrong (971280760, counted=971345475).
+Fix<y>? yes
+
+seagate_bkp: ***** FILE SYSTEM WAS MODIFIED *****
+seagate_bkp: 465335/152621056 files (1.0% non-contiguous), 249597112/1220942587 blocks
+
+  
+-- sudo fsck.ext4 -f /dev/sdc1
+
+🟢 COMO COPIAR ARQUIVOS COM SEGURANÇA (jeito certo)
+✅ Método mais seguro: rsync
+
+Ele continua se der erro, verifica arquivos e evita corrupção.
+
+rsync -avh --progress /origem/ /destino/
+  
